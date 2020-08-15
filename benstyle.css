@@ -18,7 +18,7 @@ body {
     margin: 0px;
     font-size: 1.2em; }
   body p {
-    line-height: 1.2em;
+    line-height: 150%;
     font-size: 1.1em; }
 
 .btn {
@@ -34,7 +34,7 @@ body {
   .btn:hover {
     border: 2px solid #003DD9;
     background-color: #F3F3F3;
-    color: #003DD9;
+    color: #333;
     cursor: pointer;
     font-weight: 400; }
 
@@ -80,51 +80,56 @@ h3 span {
   font-weight: 200; }
 
 .wrapper {
-  border: 1px dashed black;
   margin: 0px 4em;
   display: flex;
   flex-flow: column wrap; }
-  .wrapper .preview_section_r {
-    margin: 4em 0em;
+  .wrapper .preview_section {
+    margin: 2em 0em;
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     align-self: center; }
-  .wrapper .banner {
-    grid-area: 1 / 1 / 7 / 8; }
-    .wrapper .banner img {
+    .wrapper .preview_section.right .banner {
+      grid-area: 1 / 1 / 7 / 8; }
+    .wrapper .preview_section.right .desciption_card {
+      grid-area: 3 / 3 / 5 / 9; }
+    .wrapper .preview_section.left .banner {
+      grid-area: 1 / 2 / 8 / 9; }
+    .wrapper .preview_section.left .desciption_card {
+      grid-area: 3 / 1 / 5 / 7; }
+    .wrapper .preview_section .banner img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: left; }
-  .wrapper .desciption_card {
-    border: 1px solid #003DD9;
-    grid-area: 3 / 3 / 5 / 9;
-    background-color: white;
-    padding: 1em;
-    display: flex;
-    flex-flow: column nowrap; }
-    .wrapper .desciption_card .card_nav {
+      object-position: center; }
+    .wrapper .preview_section .desciption_card {
+      border: 1px solid #003DD9;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 4px 24px rgba(0, 0, 0, 0.08);
+      background-color: white;
+      padding: 1em;
       display: flex;
-      flex-flow: row nowrap;
-      align-items: baseline;
-      justify-content: space-between; }
-      .wrapper .desciption_card .card_nav .btn {
-        align-self: flex-start; }
-      .wrapper .desciption_card .card_nav .info_pj {
+      flex-flow: column nowrap; }
+      .wrapper .preview_section .desciption_card .card_nav {
         display: flex;
-        flex-flow: column nowrap;
-        line-height: 1.6em;
+        flex-flow: row nowrap;
+        align-items: baseline;
         justify-content: space-between; }
-        .wrapper .desciption_card .card_nav .info_pj .title {
-          color: #003DD9;
-          font-size: 1.8em;
-          line-height: 1.4em; }
-        .wrapper .desciption_card .card_nav .info_pj .tags {
-          font-weight: 600;
-          font-size: 1.2em; }
+        .wrapper .preview_section .desciption_card .card_nav .btn {
+          align-self: flex-start; }
+        .wrapper .preview_section .desciption_card .card_nav .info_pj {
+          display: flex;
+          flex-flow: column nowrap;
+          line-height: 150%;
+          justify-content: space-between; }
+          .wrapper .preview_section .desciption_card .card_nav .info_pj .title {
+            color: #003DD9;
+            font-size: 1.8em;
+            line-height: 1.4em; }
+          .wrapper .preview_section .desciption_card .card_nav .info_pj .tags {
+            font-weight: 600;
+            font-size: 1.2em; }
 
 /*# sourceMappingURL=benstyle.css.map */
