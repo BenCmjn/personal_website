@@ -17,19 +17,20 @@ body {
   body h4 {
     margin: 0px;
     font-size: 1.2em; }
+  body p {
+    line-height: 1.2em;
+    font-size: 1.1em; }
 
 .btn {
-  display: inline-block;
   background-color: #003DD9;
   padding: 16px;
   color: #F3F3F3;
-  margin: 4px;
-  width: fit-content;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   text-decoration: none;
-  transition: all 0.1s; }
+  transition: all 0.1s;
+  width: fit-content; }
   .btn:hover {
     border: 2px solid #003DD9;
     background-color: #F3F3F3;
@@ -42,8 +43,6 @@ body {
 
 /* Splash screen */
 #splash {
-  /* border: solid 2px red;
-  padding: 10px; */
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -82,36 +81,33 @@ h3 span {
 
 .wrapper {
   border: 1px dashed black;
-  margin: 0px 4em; }
+  margin: 0px 4em;
+  display: flex;
+  flex-flow: column wrap; }
   .wrapper .preview_section_r {
-    border: 1px solid tomato;
     margin: 4em 0em;
     max-width: 1200px;
-    display: grid;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px; }
+    grid-row-gap: 0px;
+    align-self: center; }
   .wrapper .banner {
-    background-color: #3E3E3E;
-    margin: 5px;
     grid-area: 1 / 1 / 7 / 8; }
     .wrapper .banner img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
-      height: -webkit-fill-available; }
+      object-position: left; }
   .wrapper .desciption_card {
     border: 1px solid #003DD9;
     grid-area: 3 / 3 / 5 / 9;
     background-color: white;
-    margin: 5px;
-    z-index: 10;
+    padding: 1em;
     display: flex;
     flex-flow: column nowrap; }
     .wrapper .desciption_card .card_nav {
-      margin: 8px;
-      /* border: 2px solid blue; */
       display: flex;
       flex-flow: row nowrap;
       align-items: baseline;
@@ -121,8 +117,14 @@ h3 span {
       .wrapper .desciption_card .card_nav .info_pj {
         display: flex;
         flex-flow: column nowrap;
-        /* border: 1px solid red; */
         line-height: 1.6em;
         justify-content: space-between; }
+        .wrapper .desciption_card .card_nav .info_pj .title {
+          color: #003DD9;
+          font-size: 1.8em;
+          line-height: 1.4em; }
+        .wrapper .desciption_card .card_nav .info_pj .tags {
+          font-weight: 600;
+          font-size: 1.2em; }
 
 /*# sourceMappingURL=benstyle.css.map */
