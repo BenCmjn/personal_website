@@ -34,7 +34,7 @@ body {
         width: fit-content;
     &:hover{
         border: 2px solid $primary-color;
-        background-color: $light_grey;
+        background-color: white;
         color: $font-col;
         cursor: pointer;
         font-weight: 400;
@@ -53,7 +53,7 @@ body {
     height: 400px;
 
     justify-content: space-around;
-    margin-bottom: 40px;
+    margin-bottom: 2em;
     .portrait{
         /* border: 2px solid green; */
         padding: 0px!important;
@@ -91,9 +91,17 @@ h3 span{
 }
 .wrapper{
     // border: 1px dashed black;
-    margin: 0px 4em;
+    padding: 2em 4em;
+    margin-bottom: 2em;
     display: flex;
     flex-flow: column wrap;
+
+    .wrapper_small_pj{
+        display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    }
 
     .preview_section{
         margin: 2em 0em;
@@ -104,6 +112,7 @@ h3 span{
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         align-self: center;
+        .desciption_card > a{display: none;}
         &.right{
             .banner{grid-area: 1 / 1 / 7 / 8;}
             .desciption_card{grid-area: 3 / 3 / 5 / 9;} 
@@ -112,6 +121,23 @@ h3 span{
             .banner{grid-area: 1 / 2 / 8 / 9;}
             .desciption_card{grid-area: 3 / 1 / 5 / 7;} 
         } 
+        &.small{
+            align-self: auto;
+            display: flex;
+            flex-flow: column nowrap;
+            width: 20em;
+            border: 1px solid $primary-color;
+            .banner{height: 15em;}
+            .desciption_card {
+                border: none;
+                a{
+                display: inline;
+                align-self: center;
+                margin-bottom: -2.5em;
+                }
+            }
+            .card_nav a{display: none;}
+        }
         .banner{
             img{
                 width: 100%;
