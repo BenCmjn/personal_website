@@ -37,6 +37,9 @@ body {
     cursor: pointer;
     font-weight: 400; }
 
+#big_wrapper {
+  overflow: auto; }
+
 /* Splash screen */
 #splash {
   /* border: solid 2px red;
@@ -79,10 +82,11 @@ h3 span {
 
 .wrapper {
   border: 1px dashed black;
-  margin: 0px 40px; }
+  margin: 0px 4em; }
   .wrapper .preview_section_r {
     border: 1px solid tomato;
-    margin: 40px 0px;
+    margin: 4em 0em;
+    max-width: 1200px;
     display: grid;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -120,10 +124,5 @@ h3 span {
         /* border: 1px solid red; */
         line-height: 1.6em;
         justify-content: space-between; }
-
-/* footer */
-footer {
-  position: fixed;
-  bottom: -32px; }
 
 /*# sourceMappingURL=benstyle.css.map */
