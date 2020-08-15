@@ -22,7 +22,7 @@ body {
   display: inline-block;
   background-color: #003DD9;
   padding: 16px;
-  color: #FFFFFF;
+  color: #F3F3F3;
   margin: 4px;
   width: fit-content;
   box-sizing: border-box;
@@ -32,7 +32,7 @@ body {
   transition: all 0.1s; }
   .btn:hover {
     border: 2px solid #003DD9;
-    background-color: #FFFFFF;
+    background-color: #F3F3F3;
     color: #003DD9;
     cursor: pointer;
     font-weight: 400; }
@@ -83,24 +83,28 @@ h3 span {
   .wrapper .preview_section_r {
     border: 1px solid tomato;
     margin: 40px 0px;
-    /* display: grid;
-    grid-column: 2fr 1fr; */
-    display: flex;
-    flex-flow: column nowrap; }
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; }
   .wrapper .banner {
     background-color: #3E3E3E;
-    margin: 5px; }
+    margin: 5px;
+    grid-area: 1 / 1 / 7 / 8; }
     .wrapper .banner img {
       width: 100%;
       object-fit: cover;
       height: -webkit-fill-available; }
   .wrapper .desciption_card {
-    border: 3px solid green;
+    border: 1px solid #003DD9;
+    grid-area: 3 / 3 / 5 / 9;
+    background-color: white;
     margin: 5px;
     z-index: 10;
     display: flex;
-    flex-flow: column nowrap;
-    width: 60%; }
+    flex-flow: column nowrap; }
     .wrapper .desciption_card .card_nav {
       margin: 8px;
       /* border: 2px solid blue; */
