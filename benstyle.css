@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #F3F3F3;
   color: #333;
@@ -9,17 +10,17 @@ body {
   -webkit-align-items: left;
   align-items: left; }
   body h1 {
-    font-size: 2.4em; }
+    font-size: 3em; }
   body h2 {
-    font-size: 1.8em; }
+    font-size: 2.4em; }
   body h3 {
-    font-size: 1.4em; }
+    font-size: 1.8em; }
   body h4 {
     margin: 0px;
     font-size: 1.2em; }
   body p {
     line-height: 150%;
-    font-size: 1.1em; }
+    font-size: 1.2em; }
 
 .btn {
   background-color: #003DD9;
@@ -39,7 +40,8 @@ body {
     font-weight: 400; }
 
 #big_wrapper {
-  overflow: auto; }
+  overflow: auto;
+  overflow-x: hidden; }
 
 /* Splash screen */
 #splash {
@@ -83,7 +85,8 @@ h3 span {
   padding: 2em 4em;
   margin-bottom: 2em;
   display: flex;
-  flex-flow: column wrap; }
+  flex-flow: row wrap;
+  justify-content: space-evenly; }
   .wrapper .wrapper_small_pj {
     display: flex;
     flex-flow: row wrap;
@@ -113,7 +116,8 @@ h3 span {
       display: flex;
       flex-flow: column nowrap;
       width: 20em;
-      border: 1px solid #003DD9; }
+      border: 1px solid #003DD9;
+      margin: 2em 1em; }
       .wrapper .preview_section.small .banner {
         height: 15em; }
       .wrapper .preview_section.small .desciption_card {
@@ -155,5 +159,22 @@ h3 span {
           .wrapper .preview_section .desciption_card .card_nav .info_pj .tags {
             font-weight: 600;
             font-size: 1.2em; }
+
+#footnote {
+  margin: 3em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: start; }
+  #footnote .content {
+    font-size: 1.4em;
+    align-self: center; }
+    #footnote .content p {
+      font-size: inherit; }
+    #footnote .content .link {
+      line-height: 200%; }
+      #footnote .content .link:after {
+        content: "↗"; }
+      #footnote .content .link:before {
+        content: "↗"; }
 
 /*# sourceMappingURL=benstyle.css.map */

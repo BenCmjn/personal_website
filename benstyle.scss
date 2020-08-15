@@ -13,13 +13,13 @@ body {
     -webkit-align-items: left;
     align-items: left;
     // cursor: none;
-    h1{font-size: 2.4em;}
-    h2{font-size: 1.8em;}
-    h3{font-size: 1.4em;}
+    h1{font-size: 3em;}
+    h2{font-size: 2.4em;}
+    h3{font-size: 1.8em;}
     h4{margin: 0px;font-size: 1.2em;}
     p{
     line-height: 150%;
-    font-size: 1.1em;
+    font-size: 1.2em;
     }
 }
 .btn{
@@ -42,6 +42,7 @@ body {
 }
 #big_wrapper{
     overflow: auto;
+    overflow-x: hidden;
 }
 /* Splash screen */
 #splash{
@@ -94,7 +95,8 @@ h3 span{
     padding: 2em 4em;
     margin-bottom: 2em;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 
     .wrapper_small_pj{
         display: flex;
@@ -127,6 +129,7 @@ h3 span{
             flex-flow: column nowrap;
             width: 20em;
             border: 1px solid $primary-color;
+            margin: 2em 1em;
             .banner{height: 15em;}
             .desciption_card {
                 border: none;
@@ -180,7 +183,19 @@ h3 span{
         }
     }
 }
-
-// footer{
-//     bottom: -32px;
-// }
+#footnote{
+    margin: 3em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: start;
+    .content{
+    font-size: 1.4em;
+    align-self: center;    
+    p{font-size: inherit;}
+    .link{
+        line-height: 200%;
+        &:after{content: "↗";}
+        &:before{content: "↗";}
+    }
+    }
+}
