@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+33672332794", // WhatsApp number
+            email: "ben@ploy-studio.com", // Email
+            sms: "+33672332794", // Sms phone number
+            call: "+33672332794", // Call phone number
+            company_logo_url: "//static.whatshelp.io/img/flag.png", // URL of company logo (png, jpg, gif)
+            greeting_message: "Hey ! On peut se tutoyer ?", // Text of greeting message
+            call_to_action: "Let speak for real", // Call to action
+            button_color: "#000000", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "whatsapp,sms,email,call" // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /WhatsHelp.io widget -->
+	</body>
+</html>
