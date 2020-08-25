@@ -96,19 +96,27 @@ body {
     padding: 30px; }
     .wrapper .card .text {
       position: sticky;
-      max-height: 90vh;
+      max-height: 70vh;
       overflow-y: scroll;
-      top: 24px;
-      background: cyan; }
+      top: 30vh;
+      padding: 1em;
+      background: white;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 4px 24px rgba(0, 0, 0, 0.08); }
     .wrapper .card img {
       grid-column: 2;
       width: 100%;
       object-fit: contain; }
 
-#footnote {
-  margin: 3em;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-items: start; }
+.footnote {
+  margin: 3em; }
+  .footnote .flex_contain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: start; }
+  .footnote .col {
+    width: 300px;
+    font-size: 1.2em; }
+    .footnote .col .head_col {
+      line-height: 2em; }
 
 /*# sourceMappingURL=pjstyle.css.map */

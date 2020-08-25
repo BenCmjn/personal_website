@@ -102,11 +102,13 @@ body {
         padding: 30px;
         .text {
             position: sticky;
-            // max-width: 300px;
-            max-height: 90vh;
+            max-height: 70vh;
             overflow-y: scroll;
-            top: 24px;
-            background: cyan;
+            top: 30vh;
+            padding: 1em;
+            background: white;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 4px 24px rgba(0, 0, 0, 0.08);
+            // b{color: $primary-color;}
           }
         img {
         grid-column: 2;
@@ -115,9 +117,21 @@ body {
         }
       }
 }
-#footnote{
+.footnote{
     margin: 3em;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-items: start;
+    .flex_contain{
+        display: flex;
+        flex-flow: row wrap;
+        justify-items: start;
+    }
+    .col{
+        width: 300px;
+        font-size: 1.2em;
+        .head_col{
+            line-height: 2em;
+        }
+        .content_col{
+            
+        }
+    }
 }
