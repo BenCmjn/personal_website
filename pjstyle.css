@@ -80,34 +80,30 @@ body {
   .wrapper .intro {
     border: 1px solid red;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
     height: 20em; }
     .wrapper .intro p {
       font-weight: 600; }
-  .wrapper #main_grid {
-    border: 1px solid green;
-    width: 100%;
-    padding-top: 2.5em;
-    height: 90vh;
-    top: 100vh;
+  .wrapper .card {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-column-gap: .5em;
-    grid-row-gap: 0px; }
-  .wrapper .gallery {
-    grid-area: 1 / 3 / 11 / 7;
-    background-color: blue;
-    overflow: scroll; }
-    .wrapper .gallery img {
-      width: 100%; }
-  .wrapper .txt {
-    grid-area: 2 / 1 / 11 / 3;
-    border: 1px solid red;
-    background-color: white; }
+    grid-template-columns: 30% 70%;
+    gap: 18px;
+    margin: 30px auto;
+    border: pink solid thin;
+    padding: 30px; }
+    .wrapper .card .text {
+      position: sticky;
+      max-height: 90vh;
+      overflow-y: scroll;
+      top: 24px;
+      background: cyan; }
+    .wrapper .card img {
+      grid-column: 2;
+      width: 100%;
+      object-fit: contain; }
 
 #footnote {
   margin: 3em;
