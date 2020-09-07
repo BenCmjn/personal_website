@@ -47,46 +47,56 @@ body {
   overflow-x: hidden; }
 
 #banner {
-  border: 1px dotted blue;
+  position: relative;
+  width: 100%;
+  background-color: blue;
   height: 400px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center; }
+  overflow: hidden; }
   #banner img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center; }
+
+.positioner {
+  width: 100vw;
+  overflow: visible;
+  margin-bottom: -4rem; }
+  .positioner .chapeau {
+    display: inline block;
     object-position: center;
-    height: -webkit-fill-available; }
-  #banner .chapeau {
-    border: 1px solid #003DD9;
-    color: #003DD9;
-    background-color: white;
-    margin-top: -4.5em;
-    padding: 1em;
-    align-self: center;
+    max-width: 40%;
+    min-width: 20%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 2rem;
+    background: white;
     text-align: center;
-    position: relative;
-    width: 50%;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 4px 24px rgba(0, 0, 0, 0.08); }
+    color: #003DD9;
+    border: thin solid #003DD9;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 4px 24px rgba(0, 0, 0, 0.08);
+    z-index: 300;
+    transform: translate(0, -50%); }
+    .positioner .chapeau h2 {
+      margin: 0px;
+      font-size: 2.5rem; }
 
 /* Main sections */
 .wrapper {
-  border: 1px dashed black;
   margin: 4em auto;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center; }
   .wrapper .intro {
-    border: 1px solid red;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
-    height: 20em; }
-    .wrapper .intro p {
-      font-weight: 600; }
+    font-weight: 600; }
+    .wrapper .intro ul {
+      line-height: 1.5em; }
   .wrapper .card {
     display: grid;
     grid-template-columns: 30% 70%;
